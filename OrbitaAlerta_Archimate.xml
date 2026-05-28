@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <model xmlns="http://www.opengroup.org/xsd/archimate/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd" identifier="id-orbitaalerta">
   <name xml:lang="pt">OrbitaAlerta</name>
-  <documentation xml:lang="pt">Modelo de arquitetura ArchiMate 3.1 do projeto OrbitaAlerta - Global Solution FIAP 2026. Contém 4 views: Motivation/Strategy, Business, Application/Data e Technology.</documentation>
+  <documentation xml:lang="pt">Modelo ArchiMate 3.1 - OrbitaAlerta - Global Solution FIAP 2026. Organizado em 4 views com Groupings para legibilidade.</documentation>
   <elements>
     <element identifier="sh-coop" xsi:type="Stakeholder">
       <name xml:lang="pt">Cooperativa Agropecuária</name>
@@ -34,28 +34,28 @@
       <name xml:lang="pt">D4 Conectividade Rural Deficiente</name>
     </element>
     <element identifier="dr-d5" xsi:type="Driver">
-      <name xml:lang="pt">D5 Pressão Regulatória ESG/Seguro</name>
+      <name xml:lang="pt">D5 Pressão ESG/Seguro</name>
     </element>
     <element identifier="dr-d6" xsi:type="Driver">
-      <name xml:lang="pt">D6 Custo de Soluções Enterprise</name>
+      <name xml:lang="pt">D6 Custo Enterprise</name>
     </element>
     <element identifier="go-g1" xsi:type="Goal">
       <name xml:lang="pt">G1 Encurtar Ciclo Detecção-Ação</name>
     </element>
     <element identifier="go-g2" xsi:type="Goal">
-      <name xml:lang="pt">G2 Aumentar Confiabilidade do Alerta</name>
+      <name xml:lang="pt">G2 Aumentar Confiabilidade</name>
     </element>
     <element identifier="go-g3" xsi:type="Goal">
       <name xml:lang="pt">G3 Operar em Baixa Conectividade</name>
     </element>
     <element identifier="go-g4" xsi:type="Goal">
-      <name xml:lang="pt">G4 Gerar Evidência Auditável</name>
+      <name xml:lang="pt">G4 Evidência Auditável</name>
     </element>
     <element identifier="go-g5" xsi:type="Goal">
       <name xml:lang="pt">G5 Integrar Fontes Públicas</name>
     </element>
     <element identifier="go-g6" xsi:type="Goal">
-      <name xml:lang="pt">G6 Viabilizar Uso por Produtor Médio</name>
+      <name xml:lang="pt">G6 Viabilizar Produtor Médio</name>
     </element>
     <element identifier="oc-o1" xsi:type="Outcome">
       <name xml:lang="pt">Resposta &lt; 8min Mediana</name>
@@ -67,16 +67,16 @@
       <name xml:lang="pt">Laudo Auditável 100%</name>
     </element>
     <element identifier="rq-r1" xsi:type="Requirement">
-      <name xml:lang="pt">RF-02 Validação por Visão Computacional</name>
+      <name xml:lang="pt">RF-02 Validação por CV</name>
     </element>
     <element identifier="rq-r2" xsi:type="Requirement">
-      <name xml:lang="pt">RF-03 Score ML de Prioridade</name>
+      <name xml:lang="pt">RF-03 Score ML</name>
     </element>
     <element identifier="rq-r3" xsi:type="Requirement">
       <name xml:lang="pt">RF-06 App Mobile Offline</name>
     </element>
     <element identifier="rq-r4" xsi:type="Requirement">
-      <name xml:lang="pt">RF-07 Estação IoT Microclimática</name>
+      <name xml:lang="pt">RF-07 Estação IoT</name>
     </element>
     <element identifier="rq-r5" xsi:type="Requirement">
       <name xml:lang="pt">RF-08 Laudo PDF Assinado</name>
@@ -88,7 +88,7 @@
       <name xml:lang="pt">C-01 Não Construir Satélite</name>
     </element>
     <element identifier="co-c4" xsi:type="Constraint">
-      <name xml:lang="pt">C-04 Stack Java + C# + Python + RN</name>
+      <name xml:lang="pt">C-04 Stack Java+C#+Py+RN</name>
     </element>
     <element identifier="co-c5" xsi:type="Constraint">
       <name xml:lang="pt">C-05 Suportar Windows Server</name>
@@ -139,7 +139,7 @@
       <name xml:lang="pt">Encerramento e Laudo</name>
     </element>
     <element identifier="bp-tel" xsi:type="BusinessProcess">
-      <name xml:lang="pt">Telemetria IoT Contínua</name>
+      <name xml:lang="pt">Telemetria IoT</name>
     </element>
     <element identifier="bs-al" xsi:type="BusinessService">
       <name xml:lang="pt">Alerta Priorizado</name>
@@ -154,10 +154,10 @@
       <name xml:lang="pt">Painel Territorial</name>
     </element>
     <element identifier="lo-cloud" xsi:type="Location">
-      <name xml:lang="pt">Centro de Operações Cloud</name>
+      <name xml:lang="pt">Centro Operações Cloud</name>
     </element>
     <element identifier="lo-coop" xsi:type="Location">
-      <name xml:lang="pt">Sede da Cooperativa</name>
+      <name xml:lang="pt">Sede Cooperativa</name>
     </element>
     <element identifier="lo-cam" xsi:type="Location">
       <name xml:lang="pt">Talhão / Campo</name>
@@ -172,7 +172,7 @@
       <name xml:lang="pt">Painel Web C# ASP.NET</name>
     </element>
     <element identifier="ac-gw" xsi:type="ApplicationComponent">
-      <name xml:lang="pt">API Gateway Spring Cloud</name>
+      <name xml:lang="pt">API Gateway</name>
     </element>
     <element identifier="ac-api" xsi:type="ApplicationComponent">
       <name xml:lang="pt">API Core Java Spring Boot</name>
@@ -181,10 +181,10 @@
       <name xml:lang="pt">Worker Ingestão Python</name>
     </element>
     <element identifier="ac-cv" xsi:type="ApplicationComponent">
-      <name xml:lang="pt">Módulo Visão Computacional Python</name>
+      <name xml:lang="pt">Módulo Visão Computacional</name>
     </element>
     <element identifier="ac-ml" xsi:type="ApplicationComponent">
-      <name xml:lang="pt">Serviço Scoring ML Python</name>
+      <name xml:lang="pt">Serviço Scoring ML</name>
     </element>
     <element identifier="ac-laudo" xsi:type="ApplicationComponent">
       <name xml:lang="pt">Gerador de Laudos C#</name>
@@ -193,7 +193,7 @@
       <name xml:lang="pt">Broker MQTT</name>
     </element>
     <element identifier="ac-adp" xsi:type="ApplicationComponent">
-      <name xml:lang="pt">Adaptadores Externos (INPE/FIRMS/Sentinel)</name>
+      <name xml:lang="pt">Adaptadores Externos</name>
     </element>
     <element identifier="as-al" xsi:type="ApplicationService">
       <name xml:lang="pt">Serviço de Alertas</name>
@@ -226,22 +226,22 @@
       <name xml:lang="pt">Laudo PDF</name>
     </element>
     <element identifier="nd-edge" xsi:type="Node">
-      <name xml:lang="pt">VM-EDGE (Ubuntu Server)</name>
+      <name xml:lang="pt">VM-EDGE (Ubuntu)</name>
     </element>
     <element identifier="nd-java" xsi:type="Node">
-      <name xml:lang="pt">VM-APP-JAVA (Ubuntu Server)</name>
+      <name xml:lang="pt">VM-APP-JAVA (Ubuntu)</name>
     </element>
     <element identifier="nd-cs" xsi:type="Node">
-      <name xml:lang="pt">VM-APP-CS (Windows Server 2022)</name>
+      <name xml:lang="pt">VM-APP-CS (Win Server 2022)</name>
     </element>
     <element identifier="nd-py" xsi:type="Node">
-      <name xml:lang="pt">VM-WORKERS-PY (Ubuntu + GPU)</name>
+      <name xml:lang="pt">VM-WORKERS-PY (Ubuntu+GPU)</name>
     </element>
     <element identifier="nd-iot" xsi:type="Node">
-      <name xml:lang="pt">VM-IOT (Ubuntu Server)</name>
+      <name xml:lang="pt">VM-IOT (Ubuntu)</name>
     </element>
     <element identifier="nd-db" xsi:type="Node">
-      <name xml:lang="pt">VM-DB (Ubuntu Server)</name>
+      <name xml:lang="pt">VM-DB (Ubuntu)</name>
     </element>
     <element identifier="nd-sto" xsi:type="Node">
       <name xml:lang="pt">VM-STORAGE (MinIO)</name>
@@ -250,13 +250,13 @@
       <name xml:lang="pt">Estação IoT ESP32</name>
     </element>
     <element identifier="dv-rpi" xsi:type="Device">
-      <name xml:lang="pt">Raspberry Pi 4 (Câmera Campo)</name>
+      <name xml:lang="pt">Raspberry Pi 4</name>
     </element>
     <element identifier="dv-cel" xsi:type="Device">
       <name xml:lang="pt">Smartphone Brigadista</name>
     </element>
     <element identifier="sn-nginx" xsi:type="SystemSoftware">
-      <name xml:lang="pt">NGINX + Spring Cloud Gateway</name>
+      <name xml:lang="pt">NGINX + Spring Cloud GW</name>
     </element>
     <element identifier="sn-iis" xsi:type="SystemSoftware">
       <name xml:lang="pt">IIS 10</name>
@@ -268,448 +268,278 @@
       <name xml:lang="pt">Python 3.12 + FastAPI</name>
     </element>
     <element identifier="sn-mqtt" xsi:type="SystemSoftware">
-      <name xml:lang="pt">Eclipse Mosquitto MQTT 5</name>
+      <name xml:lang="pt">Eclipse Mosquitto</name>
     </element>
     <element identifier="sn-pg" xsi:type="SystemSoftware">
-      <name xml:lang="pt">PostgreSQL 16 + PostGIS 3.4</name>
+      <name xml:lang="pt">PostgreSQL 16 + PostGIS</name>
     </element>
     <element identifier="sn-mn" xsi:type="SystemSoftware">
       <name xml:lang="pt">MinIO Object Storage</name>
     </element>
-    <element identifier="nw-int" xsi:type="CommunicationNetwork">
-      <name xml:lang="pt">Internet Pública</name>
+    <element identifier="g1-sh" xsi:type="Grouping">
+      <name xml:lang="pt">Stakeholders</name>
     </element>
-    <element identifier="nw-dmz" xsi:type="CommunicationNetwork">
-      <name xml:lang="pt">VLAN 10 - DMZ</name>
+    <element identifier="g1-dr" xsi:type="Grouping">
+      <name xml:lang="pt">Drivers</name>
     </element>
-    <element identifier="nw-app" xsi:type="CommunicationNetwork">
-      <name xml:lang="pt">VLAN 20 - Aplicação</name>
+    <element identifier="g1-go" xsi:type="Grouping">
+      <name xml:lang="pt">Goals &amp; Outcomes</name>
     </element>
-    <element identifier="nw-dat" xsi:type="CommunicationNetwork">
-      <name xml:lang="pt">VLAN 30 - Dados</name>
+    <element identifier="g1-rq" xsi:type="Grouping">
+      <name xml:lang="pt">Requirements</name>
     </element>
-    <element identifier="nw-4g" xsi:type="CommunicationNetwork">
-      <name xml:lang="pt">4G/Starlink (Campo)</name>
+    <element identifier="g1-co" xsi:type="Grouping">
+      <name xml:lang="pt">Constraints</name>
+    </element>
+    <element identifier="g2-lo" xsi:type="Grouping">
+      <name xml:lang="pt">Localidades</name>
+    </element>
+    <element identifier="g2-ac" xsi:type="Grouping">
+      <name xml:lang="pt">Atores &amp; Papéis</name>
+    </element>
+    <element identifier="g2-pr" xsi:type="Grouping">
+      <name xml:lang="pt">Funções &amp; Processos de Negócio</name>
+    </element>
+    <element identifier="g2-sv" xsi:type="Grouping">
+      <name xml:lang="pt">Serviços de Negócio</name>
+    </element>
+    <element identifier="g3-pr" xsi:type="Grouping">
+      <name xml:lang="pt">Camada de Apresentação</name>
+    </element>
+    <element identifier="g3-api" xsi:type="Grouping">
+      <name xml:lang="pt">Camada de API (SoA)</name>
+    </element>
+    <element identifier="g3-wk" xsi:type="Grouping">
+      <name xml:lang="pt">Workers &amp; Integração</name>
+    </element>
+    <element identifier="g3-sv" xsi:type="Grouping">
+      <name xml:lang="pt">Serviços de Aplicação</name>
+    </element>
+    <element identifier="g3-do" xsi:type="Grouping">
+      <name xml:lang="pt">Camada de Dados</name>
+    </element>
+    <element identifier="g3-ex" xsi:type="Grouping">
+      <name xml:lang="pt">Fontes Externas</name>
+    </element>
+    <element identifier="g4-fl" xsi:type="Grouping">
+      <name xml:lang="pt">Zona Campo (4G/Starlink)</name>
+    </element>
+    <element identifier="g4-dz" xsi:type="Grouping">
+      <name xml:lang="pt">Zona DMZ (VLAN 10)</name>
+    </element>
+    <element identifier="g4-ap" xsi:type="Grouping">
+      <name xml:lang="pt">Zona Aplicação (VLAN 20)</name>
+    </element>
+    <element identifier="g4-dt" xsi:type="Grouping">
+      <name xml:lang="pt">Zona Dados (VLAN 30)</name>
     </element>
   </elements>
   <relationships>
-    <relationship identifier="rel-1" source="sh-coop" target="dr-d1" xsi:type="Association">
+    <relationship identifier="rel-1" source="g1-sh" target="g1-dr" xsi:type="Association">
     </relationship>
-    <relationship identifier="rel-2" source="sh-coop" target="dr-d6" xsi:type="Association">
+    <relationship identifier="rel-2" source="g1-dr" target="g1-go" xsi:type="Influence" modifier="+">
     </relationship>
-    <relationship identifier="rel-3" source="sh-prod" target="dr-d4" xsi:type="Association">
+    <relationship identifier="rel-3" source="g1-rq" target="g1-go" xsi:type="Realization">
     </relationship>
-    <relationship identifier="rel-4" source="sh-prefe" target="dr-d2" xsi:type="Association">
+    <relationship identifier="rel-4" source="g1-co" target="g1-rq" xsi:type="Influence" modifier="-">
     </relationship>
-    <relationship identifier="rel-5" source="sh-brig" target="dr-d4" xsi:type="Association">
+    <relationship identifier="rel-5" source="g2-lo" target="g2-ac" xsi:type="Assignment">
     </relationship>
-    <relationship identifier="rel-6" source="sh-esg" target="dr-d5" xsi:type="Association">
+    <relationship identifier="rel-6" source="g2-ac" target="g2-pr" xsi:type="Assignment">
     </relationship>
-    <relationship identifier="rel-7" source="sh-inpe" target="dr-d2" xsi:type="Association">
+    <relationship identifier="rel-7" source="g2-pr" target="g2-sv" xsi:type="Realization">
     </relationship>
-    <relationship identifier="rel-8" source="dr-d1" target="go-g1" xsi:type="Influence" modifier="+">
+    <relationship identifier="rel-8" source="bp-ing" target="bp-dep" xsi:type="Triggering">
     </relationship>
-    <relationship identifier="rel-9" source="dr-d2" target="go-g5" xsi:type="Influence" modifier="+">
+    <relationship identifier="rel-9" source="bp-dep" target="bp-enc" xsi:type="Triggering">
     </relationship>
-    <relationship identifier="rel-10" source="dr-d3" target="go-g2" xsi:type="Influence" modifier="+">
+    <relationship identifier="rel-10" source="bp-tel" target="bp-ing" xsi:type="Triggering">
     </relationship>
-    <relationship identifier="rel-11" source="dr-d4" target="go-g3" xsi:type="Influence" modifier="+">
+    <relationship identifier="rel-11" source="g3-api" target="g3-pr" xsi:type="Serving">
     </relationship>
-    <relationship identifier="rel-12" source="dr-d5" target="go-g4" xsi:type="Influence" modifier="+">
+    <relationship identifier="rel-12" source="g3-api" target="g3-wk" xsi:type="Flow">
     </relationship>
-    <relationship identifier="rel-13" source="dr-d6" target="go-g6" xsi:type="Influence" modifier="+">
+    <relationship identifier="rel-13" source="g3-ex" target="g3-wk" xsi:type="Flow">
     </relationship>
-    <relationship identifier="rel-14" source="oc-o1" target="go-g1" xsi:type="Realization">
+    <relationship identifier="rel-14" source="g3-api" target="g3-sv" xsi:type="Realization">
     </relationship>
-    <relationship identifier="rel-15" source="oc-o2" target="go-g3" xsi:type="Realization">
+    <relationship identifier="rel-15" source="g3-wk" target="g3-sv" xsi:type="Realization">
     </relationship>
-    <relationship identifier="rel-16" source="oc-o3" target="go-g4" xsi:type="Realization">
+    <relationship identifier="rel-16" source="g3-api" target="g3-do" xsi:type="Access">
     </relationship>
-    <relationship identifier="rel-17" source="rq-r1" target="go-g2" xsi:type="Realization">
+    <relationship identifier="rel-17" source="g3-wk" target="g3-do" xsi:type="Access">
     </relationship>
-    <relationship identifier="rel-18" source="rq-r2" target="go-g1" xsi:type="Realization">
+    <relationship identifier="rel-18" source="g4-fl" target="g4-dz" xsi:type="Flow">
     </relationship>
-    <relationship identifier="rel-19" source="rq-r3" target="go-g3" xsi:type="Realization">
+    <relationship identifier="rel-19" source="g4-dz" target="g4-ap" xsi:type="Flow">
     </relationship>
-    <relationship identifier="rel-20" source="rq-r4" target="go-g2" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-21" source="rq-r5" target="go-g4" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-22" source="rq-r6" target="go-g4" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-23" source="co-c1" target="rq-r2" xsi:type="Influence" modifier="-">
-    </relationship>
-    <relationship identifier="rel-24" source="co-c4" target="rq-r1" xsi:type="Influence" modifier="-">
-    </relationship>
-    <relationship identifier="rel-25" source="co-c4" target="rq-r3" xsi:type="Influence" modifier="-">
-    </relationship>
-    <relationship identifier="rel-26" source="co-c5" target="rq-r5" xsi:type="Influence" modifier="-">
-    </relationship>
-    <relationship identifier="rel-27" source="ba-coord" target="br-tri" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-28" source="ba-brig" target="br-cam" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-29" source="ba-dc" target="br-ges" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-30" source="ba-op" target="br-tri" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-31" source="br-tri" target="bp-ing" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-32" source="br-cam" target="bp-dep" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-33" source="br-cam" target="bp-enc" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-34" source="br-ges" target="bp-dep" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-35" source="bp-ing" target="bp-dep" xsi:type="Triggering">
-    </relationship>
-    <relationship identifier="rel-36" source="bp-dep" target="bp-enc" xsi:type="Triggering">
-    </relationship>
-    <relationship identifier="rel-37" source="bp-tel" target="bp-ing" xsi:type="Triggering">
-    </relationship>
-    <relationship identifier="rel-38" source="bf-mon" target="bp-ing" xsi:type="Aggregation">
-    </relationship>
-    <relationship identifier="rel-39" source="bf-mon" target="bp-tel" xsi:type="Aggregation">
-    </relationship>
-    <relationship identifier="rel-40" source="bf-des" target="bp-dep" xsi:type="Aggregation">
-    </relationship>
-    <relationship identifier="rel-41" source="bf-aud" target="bp-enc" xsi:type="Aggregation">
-    </relationship>
-    <relationship identifier="rel-42" source="bf-sup" target="bp-ing" xsi:type="Aggregation">
-    </relationship>
-    <relationship identifier="rel-43" source="bp-ing" target="bs-al" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-44" source="bp-dep" target="bs-de" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-45" source="bp-enc" target="bs-la" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-46" source="bp-ing" target="bs-pa" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-47" source="bs-al" target="ba-coord" xsi:type="Serving">
-    </relationship>
-    <relationship identifier="rel-48" source="bs-de" target="ba-brig" xsi:type="Serving">
-    </relationship>
-    <relationship identifier="rel-49" source="bs-la" target="ba-aud" xsi:type="Serving">
-    </relationship>
-    <relationship identifier="rel-50" source="bs-pa" target="ba-dc" xsi:type="Serving">
-    </relationship>
-    <relationship identifier="rel-51" source="lo-cloud" target="ba-op" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-52" source="lo-coop" target="ba-coord" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-53" source="lo-cam" target="ba-brig" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-54" source="lo-pref" target="ba-dc" xsi:type="Assignment">
-    </relationship>
-    <relationship identifier="rel-55" source="ac-gw" target="ac-rn" xsi:type="Serving">
-    </relationship>
-    <relationship identifier="rel-56" source="ac-gw" target="ac-pa" xsi:type="Serving">
-    </relationship>
-    <relationship identifier="rel-57" source="ac-gw" target="ac-api" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-58" source="ac-api" target="ac-wing" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-59" source="ac-api" target="ac-cv" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-60" source="ac-api" target="ac-ml" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-61" source="ac-api" target="ac-laudo" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-62" source="ac-wing" target="ac-adp" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-63" source="ac-cv" target="ac-adp" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-64" source="ac-mqtt" target="ac-api" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-65" source="ac-api" target="as-al" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-66" source="ac-api" target="as-oc" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-67" source="ac-ml" target="as-sc" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-68" source="ac-laudo" target="as-pdf" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-69" source="ac-mqtt" target="as-te" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-70" source="ac-api" target="do-foc" xsi:type="Access">
-    </relationship>
-    <relationship identifier="rel-71" source="ac-api" target="do-area" xsi:type="Access">
-    </relationship>
-    <relationship identifier="rel-72" source="ac-api" target="do-oco" xsi:type="Access">
-    </relationship>
-    <relationship identifier="rel-73" source="ac-laudo" target="do-lau" xsi:type="Access">
-    </relationship>
-    <relationship identifier="rel-74" source="ac-rn" target="do-evi" xsi:type="Access">
-    </relationship>
-    <relationship identifier="rel-75" source="ac-cv" target="do-foc" xsi:type="Access">
-    </relationship>
-    <relationship identifier="rel-76" source="ac-ml" target="do-foc" xsi:type="Access">
-    </relationship>
-    <relationship identifier="rel-77" source="dv-esp" target="nw-4g" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-78" source="dv-cel" target="nw-4g" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-79" source="dv-rpi" target="nw-4g" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-80" source="nw-4g" target="nw-int" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-81" source="nw-int" target="nw-dmz" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-82" source="nw-dmz" target="nw-app" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-83" source="nw-app" target="nw-dat" xsi:type="Flow">
-    </relationship>
-    <relationship identifier="rel-84" source="nd-edge" target="nw-dmz" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-85" source="nd-java" target="nw-app" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-86" source="nd-cs" target="nw-app" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-87" source="nd-py" target="nw-app" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-88" source="nd-iot" target="nw-app" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-89" source="nd-db" target="nw-dat" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-90" source="nd-sto" target="nw-dat" xsi:type="Association">
-    </relationship>
-    <relationship identifier="rel-91" source="nd-edge" target="sn-nginx" xsi:type="Composition">
-    </relationship>
-    <relationship identifier="rel-92" source="nd-java" target="sn-jvm" xsi:type="Composition">
-    </relationship>
-    <relationship identifier="rel-93" source="nd-cs" target="sn-iis" xsi:type="Composition">
-    </relationship>
-    <relationship identifier="rel-94" source="nd-py" target="sn-py" xsi:type="Composition">
-    </relationship>
-    <relationship identifier="rel-95" source="nd-iot" target="sn-mqtt" xsi:type="Composition">
-    </relationship>
-    <relationship identifier="rel-96" source="nd-db" target="sn-pg" xsi:type="Composition">
-    </relationship>
-    <relationship identifier="rel-97" source="nd-sto" target="sn-mn" xsi:type="Composition">
-    </relationship>
-    <relationship identifier="rel-98" source="sn-nginx" target="ac-gw" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-99" source="sn-jvm" target="ac-api" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-100" source="sn-iis" target="ac-pa" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-101" source="sn-iis" target="ac-laudo" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-102" source="sn-py" target="ac-wing" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-103" source="sn-py" target="ac-cv" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-104" source="sn-py" target="ac-ml" xsi:type="Realization">
-    </relationship>
-    <relationship identifier="rel-105" source="sn-mqtt" target="ac-mqtt" xsi:type="Realization">
+    <relationship identifier="rel-20" source="g4-ap" target="g4-dt" xsi:type="Flow">
     </relationship>
   </relationships>
   <views>
     <diagrams>
       <view identifier="v1" xsi:type="Diagram">
         <name xml:lang="pt">View 1 - Motivation &amp; Strategy</name>
-        <node identifier="n-v1-sh-coop" elementRef="sh-coop" x="20" y="20" w="150" h="55"/>
-        <node identifier="n-v1-sh-prod" elementRef="sh-prod" x="180" y="20" w="150" h="55"/>
-        <node identifier="n-v1-sh-prefe" elementRef="sh-prefe" x="340" y="20" w="150" h="55"/>
-        <node identifier="n-v1-sh-brig" elementRef="sh-brig" x="500" y="20" w="150" h="55"/>
-        <node identifier="n-v1-sh-esg" elementRef="sh-esg" x="660" y="20" w="150" h="55"/>
-        <node identifier="n-v1-sh-inpe" elementRef="sh-inpe" x="820" y="20" w="150" h="55"/>
-        <node identifier="n-v1-dr-d1" elementRef="dr-d1" x="20" y="110" w="150" h="55"/>
-        <node identifier="n-v1-dr-d2" elementRef="dr-d2" x="180" y="110" w="150" h="55"/>
-        <node identifier="n-v1-dr-d3" elementRef="dr-d3" x="340" y="110" w="150" h="55"/>
-        <node identifier="n-v1-dr-d4" elementRef="dr-d4" x="500" y="110" w="150" h="55"/>
-        <node identifier="n-v1-dr-d5" elementRef="dr-d5" x="660" y="110" w="150" h="55"/>
-        <node identifier="n-v1-dr-d6" elementRef="dr-d6" x="820" y="110" w="150" h="55"/>
-        <node identifier="n-v1-go-g1" elementRef="go-g1" x="20" y="220" w="150" h="55"/>
-        <node identifier="n-v1-go-g2" elementRef="go-g2" x="180" y="220" w="150" h="55"/>
-        <node identifier="n-v1-go-g3" elementRef="go-g3" x="340" y="220" w="150" h="55"/>
-        <node identifier="n-v1-go-g4" elementRef="go-g4" x="500" y="220" w="150" h="55"/>
-        <node identifier="n-v1-go-g5" elementRef="go-g5" x="660" y="220" w="150" h="55"/>
-        <node identifier="n-v1-go-g6" elementRef="go-g6" x="820" y="220" w="150" h="55"/>
-        <node identifier="n-v1-oc-o1" elementRef="oc-o1" x="20" y="330" w="150" h="55"/>
-        <node identifier="n-v1-oc-o2" elementRef="oc-o2" x="340" y="330" w="150" h="55"/>
-        <node identifier="n-v1-oc-o3" elementRef="oc-o3" x="500" y="330" w="150" h="55"/>
-        <node identifier="n-v1-rq-r1" elementRef="rq-r1" x="20" y="430" w="160" h="55"/>
-        <node identifier="n-v1-rq-r2" elementRef="rq-r2" x="200" y="430" w="160" h="55"/>
-        <node identifier="n-v1-rq-r3" elementRef="rq-r3" x="380" y="430" w="160" h="55"/>
-        <node identifier="n-v1-rq-r4" elementRef="rq-r4" x="560" y="430" w="160" h="55"/>
-        <node identifier="n-v1-rq-r5" elementRef="rq-r5" x="740" y="430" w="160" h="55"/>
-        <node identifier="n-v1-rq-r6" elementRef="rq-r6" x="920" y="430" w="160" h="55"/>
-        <node identifier="n-v1-co-c1" elementRef="co-c1" x="20" y="530" w="160" h="55"/>
-        <node identifier="n-v1-co-c4" elementRef="co-c4" x="200" y="530" w="160" h="55"/>
-        <node identifier="n-v1-co-c5" elementRef="co-c5" x="380" y="530" w="160" h="55"/>
-        <connection identifier="c-v1-rel-1" relationshipRef="rel-1" source="n-v1-sh-coop" target="n-v1-dr-d1"/>
-        <connection identifier="c-v1-rel-2" relationshipRef="rel-2" source="n-v1-sh-coop" target="n-v1-dr-d6"/>
-        <connection identifier="c-v1-rel-3" relationshipRef="rel-3" source="n-v1-sh-prod" target="n-v1-dr-d4"/>
-        <connection identifier="c-v1-rel-4" relationshipRef="rel-4" source="n-v1-sh-prefe" target="n-v1-dr-d2"/>
-        <connection identifier="c-v1-rel-5" relationshipRef="rel-5" source="n-v1-sh-brig" target="n-v1-dr-d4"/>
-        <connection identifier="c-v1-rel-6" relationshipRef="rel-6" source="n-v1-sh-esg" target="n-v1-dr-d5"/>
-        <connection identifier="c-v1-rel-7" relationshipRef="rel-7" source="n-v1-sh-inpe" target="n-v1-dr-d2"/>
-        <connection identifier="c-v1-rel-8" relationshipRef="rel-8" source="n-v1-dr-d1" target="n-v1-go-g1"/>
-        <connection identifier="c-v1-rel-9" relationshipRef="rel-9" source="n-v1-dr-d2" target="n-v1-go-g5"/>
-        <connection identifier="c-v1-rel-10" relationshipRef="rel-10" source="n-v1-dr-d3" target="n-v1-go-g2"/>
-        <connection identifier="c-v1-rel-11" relationshipRef="rel-11" source="n-v1-dr-d4" target="n-v1-go-g3"/>
-        <connection identifier="c-v1-rel-12" relationshipRef="rel-12" source="n-v1-dr-d5" target="n-v1-go-g4"/>
-        <connection identifier="c-v1-rel-13" relationshipRef="rel-13" source="n-v1-dr-d6" target="n-v1-go-g6"/>
-        <connection identifier="c-v1-rel-14" relationshipRef="rel-14" source="n-v1-oc-o1" target="n-v1-go-g1"/>
-        <connection identifier="c-v1-rel-15" relationshipRef="rel-15" source="n-v1-oc-o2" target="n-v1-go-g3"/>
-        <connection identifier="c-v1-rel-16" relationshipRef="rel-16" source="n-v1-oc-o3" target="n-v1-go-g4"/>
-        <connection identifier="c-v1-rel-17" relationshipRef="rel-17" source="n-v1-rq-r1" target="n-v1-go-g2"/>
-        <connection identifier="c-v1-rel-18" relationshipRef="rel-18" source="n-v1-rq-r2" target="n-v1-go-g1"/>
-        <connection identifier="c-v1-rel-19" relationshipRef="rel-19" source="n-v1-rq-r3" target="n-v1-go-g3"/>
-        <connection identifier="c-v1-rel-20" relationshipRef="rel-20" source="n-v1-rq-r4" target="n-v1-go-g2"/>
-        <connection identifier="c-v1-rel-21" relationshipRef="rel-21" source="n-v1-rq-r5" target="n-v1-go-g4"/>
-        <connection identifier="c-v1-rel-22" relationshipRef="rel-22" source="n-v1-rq-r6" target="n-v1-go-g4"/>
-        <connection identifier="c-v1-rel-23" relationshipRef="rel-23" source="n-v1-co-c1" target="n-v1-rq-r2"/>
-        <connection identifier="c-v1-rel-24" relationshipRef="rel-24" source="n-v1-co-c4" target="n-v1-rq-r1"/>
-        <connection identifier="c-v1-rel-25" relationshipRef="rel-25" source="n-v1-co-c4" target="n-v1-rq-r3"/>
-        <connection identifier="c-v1-rel-26" relationshipRef="rel-26" source="n-v1-co-c5" target="n-v1-rq-r5"/>
+        <node identifier="n-v1-g1sh" xsi:type="Element" elementRef="g1-sh" x="20" y="20" w="1100" h="110">
+          <node identifier="n-v1-sh-coop" xsi:type="Element" elementRef="sh-coop" x="40" y="60" w="160" h="50" />
+          <node identifier="n-v1-sh-prod" xsi:type="Element" elementRef="sh-prod" x="215" y="60" w="160" h="50" />
+          <node identifier="n-v1-sh-prefe" xsi:type="Element" elementRef="sh-prefe" x="390" y="60" w="160" h="50" />
+          <node identifier="n-v1-sh-brig" xsi:type="Element" elementRef="sh-brig" x="565" y="60" w="160" h="50" />
+          <node identifier="n-v1-sh-esg" xsi:type="Element" elementRef="sh-esg" x="740" y="60" w="160" h="50" />
+          <node identifier="n-v1-sh-inpe" xsi:type="Element" elementRef="sh-inpe" x="915" y="60" w="180" h="50" />
+        </node>
+        <node identifier="n-v1-g1dr" xsi:type="Element" elementRef="g1-dr" x="20" y="160" w="1100" h="110">
+          <node identifier="n-v1-dr-d1" xsi:type="Element" elementRef="dr-d1" x="40" y="200" w="160" h="50" />
+          <node identifier="n-v1-dr-d2" xsi:type="Element" elementRef="dr-d2" x="215" y="200" w="160" h="50" />
+          <node identifier="n-v1-dr-d3" xsi:type="Element" elementRef="dr-d3" x="390" y="200" w="160" h="50" />
+          <node identifier="n-v1-dr-d4" xsi:type="Element" elementRef="dr-d4" x="565" y="200" w="160" h="50" />
+          <node identifier="n-v1-dr-d5" xsi:type="Element" elementRef="dr-d5" x="740" y="200" w="160" h="50" />
+          <node identifier="n-v1-dr-d6" xsi:type="Element" elementRef="dr-d6" x="915" y="200" w="180" h="50" />
+        </node>
+        <node identifier="n-v1-g1go" xsi:type="Element" elementRef="g1-go" x="20" y="300" w="1100" h="180">
+          <node identifier="n-v1-go-g1" xsi:type="Element" elementRef="go-g1" x="40" y="340" w="170" h="50" />
+          <node identifier="n-v1-go-g2" xsi:type="Element" elementRef="go-g2" x="225" y="340" w="170" h="50" />
+          <node identifier="n-v1-go-g3" xsi:type="Element" elementRef="go-g3" x="410" y="340" w="170" h="50" />
+          <node identifier="n-v1-go-g4" xsi:type="Element" elementRef="go-g4" x="595" y="340" w="170" h="50" />
+          <node identifier="n-v1-go-g5" xsi:type="Element" elementRef="go-g5" x="780" y="340" w="170" h="50" />
+          <node identifier="n-v1-go-g6" xsi:type="Element" elementRef="go-g6" x="925" y="340" w="170" h="50" />
+          <node identifier="n-v1-oc-o1" xsi:type="Element" elementRef="oc-o1" x="120" y="410" w="200" h="50" />
+          <node identifier="n-v1-oc-o2" xsi:type="Element" elementRef="oc-o2" x="440" y="410" w="200" h="50" />
+          <node identifier="n-v1-oc-o3" xsi:type="Element" elementRef="oc-o3" x="740" y="410" w="200" h="50" />
+        </node>
+        <node identifier="n-v1-g1rq" xsi:type="Element" elementRef="g1-rq" x="20" y="510" w="1100" h="110">
+          <node identifier="n-v1-rq-r1" xsi:type="Element" elementRef="rq-r1" x="40" y="550" w="170" h="50" />
+          <node identifier="n-v1-rq-r2" xsi:type="Element" elementRef="rq-r2" x="225" y="550" w="170" h="50" />
+          <node identifier="n-v1-rq-r3" xsi:type="Element" elementRef="rq-r3" x="410" y="550" w="170" h="50" />
+          <node identifier="n-v1-rq-r4" xsi:type="Element" elementRef="rq-r4" x="595" y="550" w="170" h="50" />
+          <node identifier="n-v1-rq-r5" xsi:type="Element" elementRef="rq-r5" x="780" y="550" w="170" h="50" />
+          <node identifier="n-v1-rq-r6" xsi:type="Element" elementRef="rq-r6" x="925" y="550" w="170" h="50" />
+        </node>
+        <node identifier="n-v1-g1co" xsi:type="Element" elementRef="g1-co" x="20" y="650" w="1100" h="110">
+          <node identifier="n-v1-co-c1" xsi:type="Element" elementRef="co-c1" x="40" y="690" w="200" h="50" />
+          <node identifier="n-v1-co-c4" xsi:type="Element" elementRef="co-c4" x="255" y="690" w="200" h="50" />
+          <node identifier="n-v1-co-c5" xsi:type="Element" elementRef="co-c5" x="470" y="690" w="240" h="50" />
+        </node>
+        <connection identifier="c-v1-1" xsi:type="Relationship" relationshipRef="rel-1" source="n-v1-g1sh" target="n-v1-g1dr" />
+        <connection identifier="c-v1-2" xsi:type="Relationship" relationshipRef="rel-2" source="n-v1-g1dr" target="n-v1-g1go" />
+        <connection identifier="c-v1-3" xsi:type="Relationship" relationshipRef="rel-3" source="n-v1-g1rq" target="n-v1-g1go" />
+        <connection identifier="c-v1-4" xsi:type="Relationship" relationshipRef="rel-4" source="n-v1-g1co" target="n-v1-g1rq" />
       </view>
       <view identifier="v2" xsi:type="Diagram">
         <name xml:lang="pt">View 2 - Business Architecture</name>
-        <node identifier="n-v2-lo-cloud" elementRef="lo-cloud" x="20" y="20" w="170" h="50"/>
-        <node identifier="n-v2-lo-coop" elementRef="lo-coop" x="210" y="20" w="170" h="50"/>
-        <node identifier="n-v2-lo-cam" elementRef="lo-cam" x="400" y="20" w="170" h="50"/>
-        <node identifier="n-v2-lo-pref" elementRef="lo-pref" x="590" y="20" w="170" h="50"/>
-        <node identifier="n-v2-ba-op" elementRef="ba-op" x="20" y="90" w="170" h="55"/>
-        <node identifier="n-v2-ba-coord" elementRef="ba-coord" x="210" y="90" w="170" h="55"/>
-        <node identifier="n-v2-ba-brig" elementRef="ba-brig" x="400" y="90" w="170" h="55"/>
-        <node identifier="n-v2-ba-dc" elementRef="ba-dc" x="590" y="90" w="170" h="55"/>
-        <node identifier="n-v2-ba-aud" elementRef="ba-aud" x="780" y="90" w="170" h="55"/>
-        <node identifier="n-v2-br-tri" elementRef="br-tri" x="210" y="180" w="170" h="55"/>
-        <node identifier="n-v2-br-cam" elementRef="br-cam" x="400" y="180" w="170" h="55"/>
-        <node identifier="n-v2-br-ges" elementRef="br-ges" x="590" y="180" w="170" h="55"/>
-        <node identifier="n-v2-bp-ing" elementRef="bp-ing" x="20" y="280" w="170" h="55"/>
-        <node identifier="n-v2-bp-dep" elementRef="bp-dep" x="210" y="280" w="170" h="55"/>
-        <node identifier="n-v2-bp-enc" elementRef="bp-enc" x="400" y="280" w="170" h="55"/>
-        <node identifier="n-v2-bp-tel" elementRef="bp-tel" x="590" y="280" w="170" h="55"/>
-        <node identifier="n-v2-bf-mon" elementRef="bf-mon" x="20" y="380" w="170" h="55"/>
-        <node identifier="n-v2-bf-des" elementRef="bf-des" x="210" y="380" w="170" h="55"/>
-        <node identifier="n-v2-bf-aud" elementRef="bf-aud" x="400" y="380" w="170" h="55"/>
-        <node identifier="n-v2-bf-sup" elementRef="bf-sup" x="590" y="380" w="170" h="55"/>
-        <node identifier="n-v2-bs-al" elementRef="bs-al" x="20" y="480" w="170" h="55"/>
-        <node identifier="n-v2-bs-de" elementRef="bs-de" x="210" y="480" w="170" h="55"/>
-        <node identifier="n-v2-bs-la" elementRef="bs-la" x="400" y="480" w="170" h="55"/>
-        <node identifier="n-v2-bs-pa" elementRef="bs-pa" x="590" y="480" w="170" h="55"/>
-        <connection identifier="c-v2-rel-27" relationshipRef="rel-27" source="n-v2-ba-coord" target="n-v2-br-tri"/>
-        <connection identifier="c-v2-rel-28" relationshipRef="rel-28" source="n-v2-ba-brig" target="n-v2-br-cam"/>
-        <connection identifier="c-v2-rel-29" relationshipRef="rel-29" source="n-v2-ba-dc" target="n-v2-br-ges"/>
-        <connection identifier="c-v2-rel-30" relationshipRef="rel-30" source="n-v2-ba-op" target="n-v2-br-tri"/>
-        <connection identifier="c-v2-rel-31" relationshipRef="rel-31" source="n-v2-br-tri" target="n-v2-bp-ing"/>
-        <connection identifier="c-v2-rel-32" relationshipRef="rel-32" source="n-v2-br-cam" target="n-v2-bp-dep"/>
-        <connection identifier="c-v2-rel-33" relationshipRef="rel-33" source="n-v2-br-cam" target="n-v2-bp-enc"/>
-        <connection identifier="c-v2-rel-34" relationshipRef="rel-34" source="n-v2-br-ges" target="n-v2-bp-dep"/>
-        <connection identifier="c-v2-rel-35" relationshipRef="rel-35" source="n-v2-bp-ing" target="n-v2-bp-dep"/>
-        <connection identifier="c-v2-rel-36" relationshipRef="rel-36" source="n-v2-bp-dep" target="n-v2-bp-enc"/>
-        <connection identifier="c-v2-rel-37" relationshipRef="rel-37" source="n-v2-bp-tel" target="n-v2-bp-ing"/>
-        <connection identifier="c-v2-rel-38" relationshipRef="rel-38" source="n-v2-bf-mon" target="n-v2-bp-ing"/>
-        <connection identifier="c-v2-rel-39" relationshipRef="rel-39" source="n-v2-bf-mon" target="n-v2-bp-tel"/>
-        <connection identifier="c-v2-rel-40" relationshipRef="rel-40" source="n-v2-bf-des" target="n-v2-bp-dep"/>
-        <connection identifier="c-v2-rel-41" relationshipRef="rel-41" source="n-v2-bf-aud" target="n-v2-bp-enc"/>
-        <connection identifier="c-v2-rel-42" relationshipRef="rel-42" source="n-v2-bf-sup" target="n-v2-bp-ing"/>
-        <connection identifier="c-v2-rel-43" relationshipRef="rel-43" source="n-v2-bp-ing" target="n-v2-bs-al"/>
-        <connection identifier="c-v2-rel-44" relationshipRef="rel-44" source="n-v2-bp-dep" target="n-v2-bs-de"/>
-        <connection identifier="c-v2-rel-45" relationshipRef="rel-45" source="n-v2-bp-enc" target="n-v2-bs-la"/>
-        <connection identifier="c-v2-rel-46" relationshipRef="rel-46" source="n-v2-bp-ing" target="n-v2-bs-pa"/>
-        <connection identifier="c-v2-rel-47" relationshipRef="rel-47" source="n-v2-bs-al" target="n-v2-ba-coord"/>
-        <connection identifier="c-v2-rel-48" relationshipRef="rel-48" source="n-v2-bs-de" target="n-v2-ba-brig"/>
-        <connection identifier="c-v2-rel-49" relationshipRef="rel-49" source="n-v2-bs-la" target="n-v2-ba-aud"/>
-        <connection identifier="c-v2-rel-50" relationshipRef="rel-50" source="n-v2-bs-pa" target="n-v2-ba-dc"/>
-        <connection identifier="c-v2-rel-51" relationshipRef="rel-51" source="n-v2-lo-cloud" target="n-v2-ba-op"/>
-        <connection identifier="c-v2-rel-52" relationshipRef="rel-52" source="n-v2-lo-coop" target="n-v2-ba-coord"/>
-        <connection identifier="c-v2-rel-53" relationshipRef="rel-53" source="n-v2-lo-cam" target="n-v2-ba-brig"/>
-        <connection identifier="c-v2-rel-54" relationshipRef="rel-54" source="n-v2-lo-pref" target="n-v2-ba-dc"/>
+        <node identifier="n-v2-g2lo" xsi:type="Element" elementRef="g2-lo" x="20" y="20" w="1100" h="110">
+          <node identifier="n-v2-lo-cloud" xsi:type="Element" elementRef="lo-cloud" x="40" y="60" w="230" h="50" />
+          <node identifier="n-v2-lo-coop" xsi:type="Element" elementRef="lo-coop" x="285" y="60" w="230" h="50" />
+          <node identifier="n-v2-lo-cam" xsi:type="Element" elementRef="lo-cam" x="530" y="60" w="230" h="50" />
+          <node identifier="n-v2-lo-pref" xsi:type="Element" elementRef="lo-pref" x="775" y="60" w="320" h="50" />
+        </node>
+        <node identifier="n-v2-g2ac" xsi:type="Element" elementRef="g2-ac" x="20" y="160" w="1100" h="180">
+          <node identifier="n-v2-ba-op" xsi:type="Element" elementRef="ba-op" x="40" y="200" w="200" h="50" />
+          <node identifier="n-v2-ba-coord" xsi:type="Element" elementRef="ba-coord" x="255" y="200" w="200" h="50" />
+          <node identifier="n-v2-ba-brig" xsi:type="Element" elementRef="ba-brig" x="470" y="200" w="200" h="50" />
+          <node identifier="n-v2-ba-dc" xsi:type="Element" elementRef="ba-dc" x="685" y="200" w="200" h="50" />
+          <node identifier="n-v2-ba-aud" xsi:type="Element" elementRef="ba-aud" x="900" y="200" w="200" h="50" />
+          <node identifier="n-v2-br-tri" xsi:type="Element" elementRef="br-tri" x="120" y="270" w="200" h="50" />
+          <node identifier="n-v2-br-cam" xsi:type="Element" elementRef="br-cam" x="470" y="270" w="200" h="50" />
+          <node identifier="n-v2-br-ges" xsi:type="Element" elementRef="br-ges" x="790" y="270" w="200" h="50" />
+        </node>
+        <node identifier="n-v2-g2pr" xsi:type="Element" elementRef="g2-pr" x="20" y="370" w="1100" h="230">
+          <node identifier="n-v2-bf-mon" xsi:type="Element" elementRef="bf-mon" x="40" y="410" w="250" h="50" />
+          <node identifier="n-v2-bf-des" xsi:type="Element" elementRef="bf-des" x="305" y="410" w="250" h="50" />
+          <node identifier="n-v2-bf-aud" xsi:type="Element" elementRef="bf-aud" x="570" y="410" w="250" h="50" />
+          <node identifier="n-v2-bf-sup" xsi:type="Element" elementRef="bf-sup" x="835" y="410" w="260" h="50" />
+          <node identifier="n-v2-bp-ing" xsi:type="Element" elementRef="bp-ing" x="40" y="480" w="220" h="60" />
+          <node identifier="n-v2-bp-dep" xsi:type="Element" elementRef="bp-dep" x="280" y="480" w="220" h="60" />
+          <node identifier="n-v2-bp-enc" xsi:type="Element" elementRef="bp-enc" x="520" y="480" w="220" h="60" />
+          <node identifier="n-v2-bp-tel" xsi:type="Element" elementRef="bp-tel" x="760" y="480" w="335" h="60" />
+        </node>
+        <node identifier="n-v2-g2sv" xsi:type="Element" elementRef="g2-sv" x="20" y="630" w="1100" h="110">
+          <node identifier="n-v2-bs-al" xsi:type="Element" elementRef="bs-al" x="40" y="670" w="250" h="50" />
+          <node identifier="n-v2-bs-de" xsi:type="Element" elementRef="bs-de" x="305" y="670" w="250" h="50" />
+          <node identifier="n-v2-bs-la" xsi:type="Element" elementRef="bs-la" x="570" y="670" w="250" h="50" />
+          <node identifier="n-v2-bs-pa" xsi:type="Element" elementRef="bs-pa" x="835" y="670" w="260" h="50" />
+        </node>
+        <connection identifier="c-v2-1" xsi:type="Relationship" relationshipRef="rel-5" source="n-v2-g2lo" target="n-v2-g2ac" />
+        <connection identifier="c-v2-2" xsi:type="Relationship" relationshipRef="rel-6" source="n-v2-g2ac" target="n-v2-g2pr" />
+        <connection identifier="c-v2-3" xsi:type="Relationship" relationshipRef="rel-7" source="n-v2-g2pr" target="n-v2-g2sv" />
+        <connection identifier="c-v2-4" xsi:type="Relationship" relationshipRef="rel-8" source="n-v2-bp-ing" target="n-v2-bp-dep" />
+        <connection identifier="c-v2-5" xsi:type="Relationship" relationshipRef="rel-9" source="n-v2-bp-dep" target="n-v2-bp-enc" />
+        <connection identifier="c-v2-6" xsi:type="Relationship" relationshipRef="rel-10" source="n-v2-bp-tel" target="n-v2-bp-ing" />
       </view>
       <view identifier="v3" xsi:type="Diagram">
         <name xml:lang="pt">View 3 - Application &amp; Data</name>
-        <node identifier="n-v3-ac-rn" elementRef="ac-rn" x="20" y="20" w="180" h="55"/>
-        <node identifier="n-v3-ac-pa" elementRef="ac-pa" x="220" y="20" w="180" h="55"/>
-        <node identifier="n-v3-ac-gw" elementRef="ac-gw" x="120" y="110" w="180" h="55"/>
-        <node identifier="n-v3-ac-api" elementRef="ac-api" x="120" y="200" w="180" h="60"/>
-        <node identifier="n-v3-ac-mqtt" elementRef="ac-mqtt" x="340" y="200" w="180" h="60"/>
-        <node identifier="n-v3-ac-adp" elementRef="ac-adp" x="560" y="200" w="220" h="60"/>
-        <node identifier="n-v3-ac-wing" elementRef="ac-wing" x="20" y="300" w="180" h="60"/>
-        <node identifier="n-v3-ac-cv" elementRef="ac-cv" x="220" y="300" w="180" h="60"/>
-        <node identifier="n-v3-ac-ml" elementRef="ac-ml" x="420" y="300" w="180" h="60"/>
-        <node identifier="n-v3-ac-laudo" elementRef="ac-laudo" x="620" y="300" w="180" h="60"/>
-        <node identifier="n-v3-as-al" elementRef="as-al" x="20" y="400" w="150" h="55"/>
-        <node identifier="n-v3-as-oc" elementRef="as-oc" x="190" y="400" w="150" h="55"/>
-        <node identifier="n-v3-as-sc" elementRef="as-sc" x="360" y="400" w="150" h="55"/>
-        <node identifier="n-v3-as-pdf" elementRef="as-pdf" x="530" y="400" w="150" h="55"/>
-        <node identifier="n-v3-as-te" elementRef="as-te" x="700" y="400" w="150" h="55"/>
-        <node identifier="n-v3-do-foc" elementRef="do-foc" x="20" y="500" w="140" h="50"/>
-        <node identifier="n-v3-do-area" elementRef="do-area" x="180" y="500" w="140" h="50"/>
-        <node identifier="n-v3-do-oco" elementRef="do-oco" x="340" y="500" w="140" h="50"/>
-        <node identifier="n-v3-do-evi" elementRef="do-evi" x="500" y="500" w="140" h="50"/>
-        <node identifier="n-v3-do-lau" elementRef="do-lau" x="660" y="500" w="140" h="50"/>
-        <connection identifier="c-v3-rel-55" relationshipRef="rel-55" source="n-v3-ac-gw" target="n-v3-ac-rn"/>
-        <connection identifier="c-v3-rel-56" relationshipRef="rel-56" source="n-v3-ac-gw" target="n-v3-ac-pa"/>
-        <connection identifier="c-v3-rel-57" relationshipRef="rel-57" source="n-v3-ac-gw" target="n-v3-ac-api"/>
-        <connection identifier="c-v3-rel-58" relationshipRef="rel-58" source="n-v3-ac-api" target="n-v3-ac-wing"/>
-        <connection identifier="c-v3-rel-59" relationshipRef="rel-59" source="n-v3-ac-api" target="n-v3-ac-cv"/>
-        <connection identifier="c-v3-rel-60" relationshipRef="rel-60" source="n-v3-ac-api" target="n-v3-ac-ml"/>
-        <connection identifier="c-v3-rel-61" relationshipRef="rel-61" source="n-v3-ac-api" target="n-v3-ac-laudo"/>
-        <connection identifier="c-v3-rel-62" relationshipRef="rel-62" source="n-v3-ac-wing" target="n-v3-ac-adp"/>
-        <connection identifier="c-v3-rel-63" relationshipRef="rel-63" source="n-v3-ac-cv" target="n-v3-ac-adp"/>
-        <connection identifier="c-v3-rel-64" relationshipRef="rel-64" source="n-v3-ac-mqtt" target="n-v3-ac-api"/>
-        <connection identifier="c-v3-rel-65" relationshipRef="rel-65" source="n-v3-ac-api" target="n-v3-as-al"/>
-        <connection identifier="c-v3-rel-66" relationshipRef="rel-66" source="n-v3-ac-api" target="n-v3-as-oc"/>
-        <connection identifier="c-v3-rel-67" relationshipRef="rel-67" source="n-v3-ac-ml" target="n-v3-as-sc"/>
-        <connection identifier="c-v3-rel-68" relationshipRef="rel-68" source="n-v3-ac-laudo" target="n-v3-as-pdf"/>
-        <connection identifier="c-v3-rel-69" relationshipRef="rel-69" source="n-v3-ac-mqtt" target="n-v3-as-te"/>
-        <connection identifier="c-v3-rel-70" relationshipRef="rel-70" source="n-v3-ac-api" target="n-v3-do-foc"/>
-        <connection identifier="c-v3-rel-71" relationshipRef="rel-71" source="n-v3-ac-api" target="n-v3-do-area"/>
-        <connection identifier="c-v3-rel-72" relationshipRef="rel-72" source="n-v3-ac-api" target="n-v3-do-oco"/>
-        <connection identifier="c-v3-rel-73" relationshipRef="rel-73" source="n-v3-ac-laudo" target="n-v3-do-lau"/>
-        <connection identifier="c-v3-rel-74" relationshipRef="rel-74" source="n-v3-ac-rn" target="n-v3-do-evi"/>
-        <connection identifier="c-v3-rel-75" relationshipRef="rel-75" source="n-v3-ac-cv" target="n-v3-do-foc"/>
-        <connection identifier="c-v3-rel-76" relationshipRef="rel-76" source="n-v3-ac-ml" target="n-v3-do-foc"/>
+        <node identifier="n-v3-g3pr" xsi:type="Element" elementRef="g3-pr" x="20" y="20" w="540" h="110">
+          <node identifier="n-v3-ac-rn" xsi:type="Element" elementRef="ac-rn" x="40" y="60" w="240" h="55" />
+          <node identifier="n-v3-ac-pa" xsi:type="Element" elementRef="ac-pa" x="300" y="60" w="240" h="55" />
+        </node>
+        <node identifier="n-v3-g3ex" xsi:type="Element" elementRef="g3-ex" x="600" y="20" w="500" h="110">
+          <node identifier="n-v3-ac-adp" xsi:type="Element" elementRef="ac-adp" x="620" y="60" w="460" h="55" />
+        </node>
+        <node identifier="n-v3-g3api" xsi:type="Element" elementRef="g3-api" x="20" y="160" w="540" h="180">
+          <node identifier="n-v3-ac-gw" xsi:type="Element" elementRef="ac-gw" x="40" y="200" w="240" h="55" />
+          <node identifier="n-v3-ac-api" xsi:type="Element" elementRef="ac-api" x="300" y="200" w="240" h="55" />
+          <node identifier="n-v3-ac-mqtt" xsi:type="Element" elementRef="ac-mqtt" x="170" y="270" w="240" h="55" />
+        </node>
+        <node identifier="n-v3-g3wk" xsi:type="Element" elementRef="g3-wk" x="600" y="160" w="500" h="180">
+          <node identifier="n-v3-ac-wing" xsi:type="Element" elementRef="ac-wing" x="620" y="200" w="220" h="55" />
+          <node identifier="n-v3-ac-cv" xsi:type="Element" elementRef="ac-cv" x="860" y="200" w="220" h="55" />
+          <node identifier="n-v3-ac-ml" xsi:type="Element" elementRef="ac-ml" x="620" y="270" w="220" h="55" />
+          <node identifier="n-v3-ac-laudo" xsi:type="Element" elementRef="ac-laudo" x="860" y="270" w="220" h="55" />
+        </node>
+        <node identifier="n-v3-g3sv" xsi:type="Element" elementRef="g3-sv" x="20" y="370" w="1080" h="110">
+          <node identifier="n-v3-as-al" xsi:type="Element" elementRef="as-al" x="40" y="410" w="200" h="55" />
+          <node identifier="n-v3-as-oc" xsi:type="Element" elementRef="as-oc" x="255" y="410" w="200" h="55" />
+          <node identifier="n-v3-as-sc" xsi:type="Element" elementRef="as-sc" x="470" y="410" w="200" h="55" />
+          <node identifier="n-v3-as-pdf" xsi:type="Element" elementRef="as-pdf" x="685" y="410" w="200" h="55" />
+          <node identifier="n-v3-as-te" xsi:type="Element" elementRef="as-te" x="900" y="410" w="180" h="55" />
+        </node>
+        <node identifier="n-v3-g3do" xsi:type="Element" elementRef="g3-do" x="20" y="510" w="1080" h="110">
+          <node identifier="n-v3-do-foc" xsi:type="Element" elementRef="do-foc" x="40" y="550" w="200" h="55" />
+          <node identifier="n-v3-do-area" xsi:type="Element" elementRef="do-area" x="255" y="550" w="200" h="55" />
+          <node identifier="n-v3-do-oco" xsi:type="Element" elementRef="do-oco" x="470" y="550" w="200" h="55" />
+          <node identifier="n-v3-do-evi" xsi:type="Element" elementRef="do-evi" x="685" y="550" w="200" h="55" />
+          <node identifier="n-v3-do-lau" xsi:type="Element" elementRef="do-lau" x="900" y="550" w="180" h="55" />
+        </node>
+        <connection identifier="c-v3-1" xsi:type="Relationship" relationshipRef="rel-11" source="n-v3-g3api" target="n-v3-g3pr" />
+        <connection identifier="c-v3-2" xsi:type="Relationship" relationshipRef="rel-12" source="n-v3-g3api" target="n-v3-g3wk" />
+        <connection identifier="c-v3-3" xsi:type="Relationship" relationshipRef="rel-13" source="n-v3-g3ex" target="n-v3-g3wk" />
+        <connection identifier="c-v3-4" xsi:type="Relationship" relationshipRef="rel-14" source="n-v3-g3api" target="n-v3-g3sv" />
+        <connection identifier="c-v3-5" xsi:type="Relationship" relationshipRef="rel-15" source="n-v3-g3wk" target="n-v3-g3sv" />
+        <connection identifier="c-v3-6" xsi:type="Relationship" relationshipRef="rel-16" source="n-v3-g3api" target="n-v3-g3do" />
+        <connection identifier="c-v3-7" xsi:type="Relationship" relationshipRef="rel-17" source="n-v3-g3wk" target="n-v3-g3do" />
       </view>
       <view identifier="v4" xsi:type="Diagram">
         <name xml:lang="pt">View 4 - Technology</name>
-        <node identifier="n-v4-dv-esp" elementRef="dv-esp" x="20" y="20" w="170" h="55"/>
-        <node identifier="n-v4-dv-rpi" elementRef="dv-rpi" x="210" y="20" w="170" h="55"/>
-        <node identifier="n-v4-dv-cel" elementRef="dv-cel" x="400" y="20" w="170" h="55"/>
-        <node identifier="n-v4-nw-4g" elementRef="nw-4g" x="20" y="100" w="200" h="50"/>
-        <node identifier="n-v4-nw-int" elementRef="nw-int" x="250" y="100" w="200" h="50"/>
-        <node identifier="n-v4-nw-dmz" elementRef="nw-dmz" x="20" y="170" w="200" h="50"/>
-        <node identifier="n-v4-nw-app" elementRef="nw-app" x="240" y="170" w="200" h="50"/>
-        <node identifier="n-v4-nw-dat" elementRef="nw-dat" x="460" y="170" w="200" h="50"/>
-        <node identifier="n-v4-nd-edge" elementRef="nd-edge" x="20" y="240" w="200" h="55"/>
-        <node identifier="n-v4-nd-java" elementRef="nd-java" x="240" y="240" w="200" h="55"/>
-        <node identifier="n-v4-nd-cs" elementRef="nd-cs" x="460" y="240" w="200" h="55"/>
-        <node identifier="n-v4-nd-py" elementRef="nd-py" x="680" y="240" w="200" h="55"/>
-        <node identifier="n-v4-nd-iot" elementRef="nd-iot" x="20" y="320" w="200" h="55"/>
-        <node identifier="n-v4-nd-db" elementRef="nd-db" x="240" y="320" w="200" h="55"/>
-        <node identifier="n-v4-nd-sto" elementRef="nd-sto" x="460" y="320" w="200" h="55"/>
-        <node identifier="n-v4-sn-nginx" elementRef="sn-nginx" x="20" y="410" w="200" h="55"/>
-        <node identifier="n-v4-sn-jvm" elementRef="sn-jvm" x="240" y="410" w="200" h="55"/>
-        <node identifier="n-v4-sn-iis" elementRef="sn-iis" x="460" y="410" w="200" h="55"/>
-        <node identifier="n-v4-sn-py" elementRef="sn-py" x="680" y="410" w="200" h="55"/>
-        <node identifier="n-v4-sn-mqtt" elementRef="sn-mqtt" x="20" y="490" w="200" h="55"/>
-        <node identifier="n-v4-sn-pg" elementRef="sn-pg" x="240" y="490" w="200" h="55"/>
-        <node identifier="n-v4-sn-mn" elementRef="sn-mn" x="460" y="490" w="200" h="55"/>
-        <connection identifier="c-v4-rel-77" relationshipRef="rel-77" source="n-v4-dv-esp" target="n-v4-nw-4g"/>
-        <connection identifier="c-v4-rel-78" relationshipRef="rel-78" source="n-v4-dv-cel" target="n-v4-nw-4g"/>
-        <connection identifier="c-v4-rel-79" relationshipRef="rel-79" source="n-v4-dv-rpi" target="n-v4-nw-4g"/>
-        <connection identifier="c-v4-rel-80" relationshipRef="rel-80" source="n-v4-nw-4g" target="n-v4-nw-int"/>
-        <connection identifier="c-v4-rel-81" relationshipRef="rel-81" source="n-v4-nw-int" target="n-v4-nw-dmz"/>
-        <connection identifier="c-v4-rel-82" relationshipRef="rel-82" source="n-v4-nw-dmz" target="n-v4-nw-app"/>
-        <connection identifier="c-v4-rel-83" relationshipRef="rel-83" source="n-v4-nw-app" target="n-v4-nw-dat"/>
-        <connection identifier="c-v4-rel-84" relationshipRef="rel-84" source="n-v4-nd-edge" target="n-v4-nw-dmz"/>
-        <connection identifier="c-v4-rel-85" relationshipRef="rel-85" source="n-v4-nd-java" target="n-v4-nw-app"/>
-        <connection identifier="c-v4-rel-86" relationshipRef="rel-86" source="n-v4-nd-cs" target="n-v4-nw-app"/>
-        <connection identifier="c-v4-rel-87" relationshipRef="rel-87" source="n-v4-nd-py" target="n-v4-nw-app"/>
-        <connection identifier="c-v4-rel-88" relationshipRef="rel-88" source="n-v4-nd-iot" target="n-v4-nw-app"/>
-        <connection identifier="c-v4-rel-89" relationshipRef="rel-89" source="n-v4-nd-db" target="n-v4-nw-dat"/>
-        <connection identifier="c-v4-rel-90" relationshipRef="rel-90" source="n-v4-nd-sto" target="n-v4-nw-dat"/>
-        <connection identifier="c-v4-rel-91" relationshipRef="rel-91" source="n-v4-nd-edge" target="n-v4-sn-nginx"/>
-        <connection identifier="c-v4-rel-92" relationshipRef="rel-92" source="n-v4-nd-java" target="n-v4-sn-jvm"/>
-        <connection identifier="c-v4-rel-93" relationshipRef="rel-93" source="n-v4-nd-cs" target="n-v4-sn-iis"/>
-        <connection identifier="c-v4-rel-94" relationshipRef="rel-94" source="n-v4-nd-py" target="n-v4-sn-py"/>
-        <connection identifier="c-v4-rel-95" relationshipRef="rel-95" source="n-v4-nd-iot" target="n-v4-sn-mqtt"/>
-        <connection identifier="c-v4-rel-96" relationshipRef="rel-96" source="n-v4-nd-db" target="n-v4-sn-pg"/>
-        <connection identifier="c-v4-rel-97" relationshipRef="rel-97" source="n-v4-nd-sto" target="n-v4-sn-mn"/>
+        <node identifier="n-v4-g4fl" xsi:type="Element" elementRef="g4-fl" x="20" y="20" w="700" h="110">
+          <node identifier="n-v4-dv-esp" xsi:type="Element" elementRef="dv-esp" x="40" y="60" w="200" h="55" />
+          <node identifier="n-v4-dv-rpi" xsi:type="Element" elementRef="dv-rpi" x="260" y="60" w="220" h="55" />
+          <node identifier="n-v4-dv-cel" xsi:type="Element" elementRef="dv-cel" x="500" y="60" w="200" h="55" />
+        </node>
+        <node identifier="n-v4-g4dz" xsi:type="Element" elementRef="g4-dz" x="20" y="160" w="350" h="180">
+          <node identifier="n-v4-nd-edge" xsi:type="Element" elementRef="nd-edge" x="40" y="200" w="310" h="55" />
+          <node identifier="n-v4-sn-nginx" xsi:type="Element" elementRef="sn-nginx" x="40" y="270" w="310" h="55" />
+        </node>
+        <node identifier="n-v4-g4ap" xsi:type="Element" elementRef="g4-ap" x="20" y="370" w="1080" h="260">
+          <node identifier="n-v4-nd-java" xsi:type="Element" elementRef="nd-java" x="40" y="410" w="250" h="55" />
+          <node identifier="n-v4-nd-cs" xsi:type="Element" elementRef="nd-cs" x="305" y="410" w="250" h="55" />
+          <node identifier="n-v4-nd-py" xsi:type="Element" elementRef="nd-py" x="570" y="410" w="250" h="55" />
+          <node identifier="n-v4-nd-iot" xsi:type="Element" elementRef="nd-iot" x="835" y="410" w="245" h="55" />
+          <node identifier="n-v4-sn-jvm" xsi:type="Element" elementRef="sn-jvm" x="40" y="480" w="250" h="55" />
+          <node identifier="n-v4-sn-iis" xsi:type="Element" elementRef="sn-iis" x="305" y="480" w="250" h="55" />
+          <node identifier="n-v4-sn-py" xsi:type="Element" elementRef="sn-py" x="570" y="480" w="250" h="55" />
+          <node identifier="n-v4-sn-mqtt" xsi:type="Element" elementRef="sn-mqtt" x="835" y="480" w="245" h="55" />
+          <node identifier="n-v4-sn-info" xsi:type="Element" elementRef="ac-api" x="305" y="555" w="250" h="55" />
+          <node identifier="n-v4-sn-info2" xsi:type="Element" elementRef="ac-laudo" x="40" y="555" w="250" h="55" />
+        </node>
+        <node identifier="n-v4-g4dt" xsi:type="Element" elementRef="g4-dt" x="20" y="660" w="700" h="180">
+          <node identifier="n-v4-nd-db" xsi:type="Element" elementRef="nd-db" x="40" y="700" w="320" h="55" />
+          <node identifier="n-v4-nd-sto" xsi:type="Element" elementRef="nd-sto" x="380" y="700" w="320" h="55" />
+          <node identifier="n-v4-sn-pg" xsi:type="Element" elementRef="sn-pg" x="40" y="770" w="320" h="55" />
+          <node identifier="n-v4-sn-mn" xsi:type="Element" elementRef="sn-mn" x="380" y="770" w="320" h="55" />
+        </node>
+        <connection identifier="c-v4-1" xsi:type="Relationship" relationshipRef="rel-18" source="n-v4-g4fl" target="n-v4-g4dz" />
+        <connection identifier="c-v4-2" xsi:type="Relationship" relationshipRef="rel-19" source="n-v4-g4dz" target="n-v4-g4ap" />
+        <connection identifier="c-v4-3" xsi:type="Relationship" relationshipRef="rel-20" source="n-v4-g4ap" target="n-v4-g4dt" />
       </view>
     </diagrams>
   </views>
