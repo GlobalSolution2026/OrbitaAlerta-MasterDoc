@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="OrbitaAlerta" id="id-orbitaalerta" version="5.0.0">
+  <folder name="Strategy" id="id-0c407c51d3c14d189a555a596fbea732" type="strategy"/>
+  <folder name="Business" id="id-56d69ef1c58d4abe8df7e052d7f109c2" type="business">
+    <element xsi:type="archimate:BusinessActor" name="Coordenador Cooperativa" id="ba-coord"/>
+    <element xsi:type="archimate:BusinessActor" name="Brigadista" id="ba-brig"/>
+    <element xsi:type="archimate:BusinessActor" name="Agente Defesa Civil" id="ba-dc"/>
+    <element xsi:type="archimate:BusinessActor" name="Auditor ESG / Seguro" id="ba-aud"/>
+    <element xsi:type="archimate:BusinessActor" name="Operador OrbitaAlerta" id="ba-op"/>
+    <element xsi:type="archimate:BusinessRole" name="Triador de Alertas" id="br-tri"/>
+    <element xsi:type="archimate:BusinessRole" name="Operador de Campo" id="br-cam"/>
+    <element xsi:type="archimate:BusinessRole" name="Gestor Territorial" id="br-ges"/>
+    <element xsi:type="archimate:BusinessFunction" name="Monitoramento Territorial" id="bf-mon"/>
+    <element xsi:type="archimate:BusinessFunction" name="Despacho e Resposta" id="bf-des"/>
+    <element xsi:type="archimate:BusinessFunction" name="Auditoria e Compliance" id="bf-aud"/>
+    <element xsi:type="archimate:BusinessFunction" name="Suporte e Onboarding" id="bf-sup"/>
+    <element xsi:type="archimate:BusinessProcess" name="Ingestão e Priorização" id="bp-ing"/>
+    <element xsi:type="archimate:BusinessProcess" name="Despacho de Brigada" id="bp-dep"/>
+    <element xsi:type="archimate:BusinessProcess" name="Encerramento e Laudo" id="bp-enc"/>
+    <element xsi:type="archimate:BusinessProcess" name="Telemetria IoT" id="bp-tel"/>
+    <element xsi:type="archimate:BusinessService" name="Alerta Priorizado" id="bs-al"/>
+    <element xsi:type="archimate:BusinessService" name="Despacho de Brigada" id="bs-de"/>
+    <element xsi:type="archimate:BusinessService" name="Laudo Digital" id="bs-la"/>
+    <element xsi:type="archimate:BusinessService" name="Painel Territorial" id="bs-pa"/>
+  </folder>
+  <folder name="Application" id="id-5d16f99570c64c0c9d64c723aff9f76c" type="application">
+    <element xsi:type="archimate:ApplicationComponent" name="App Mobile React Native" id="ac-rn"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Painel Web C# ASP.NET" id="ac-pa"/>
+    <element xsi:type="archimate:ApplicationComponent" name="API Gateway" id="ac-gw"/>
+    <element xsi:type="archimate:ApplicationComponent" name="API Core Java Spring Boot" id="ac-api"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Worker Ingestão Python" id="ac-wing"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Módulo Visão Computacional" id="ac-cv"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Serviço Scoring ML" id="ac-ml"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Gerador de Laudos C#" id="ac-laudo"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Broker MQTT" id="ac-mqtt"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Adaptadores Externos" id="ac-adp"/>
+    <element xsi:type="archimate:ApplicationService" name="Serviço de Alertas" id="as-al"/>
+    <element xsi:type="archimate:ApplicationService" name="Serviço de Ocorrências" id="as-oc"/>
+    <element xsi:type="archimate:ApplicationService" name="Serviço de Telemetria" id="as-te"/>
+    <element xsi:type="archimate:ApplicationService" name="Serviço de Laudos PDF" id="as-pdf"/>
+    <element xsi:type="archimate:ApplicationService" name="Serviço de Scoring" id="as-sc"/>
+    <element xsi:type="archimate:DataObject" name="Foco" id="do-foc"/>
+    <element xsi:type="archimate:DataObject" name="Área Monitorada" id="do-area"/>
+    <element xsi:type="archimate:DataObject" name="Ocorrência" id="do-oco"/>
+    <element xsi:type="archimate:DataObject" name="Evidência" id="do-evi"/>
+    <element xsi:type="archimate:DataObject" name="Laudo PDF" id="do-lau"/>
+  </folder>
+  <folder name="Technology &amp; Physical" id="id-5fe48dcbe79041bbb5d24397b3c9c562" type="technology">
+    <element xsi:type="archimate:Node" name="VM-EDGE (Ubuntu)" id="nd-edge"/>
+    <element xsi:type="archimate:Node" name="VM-APP-JAVA (Ubuntu)" id="nd-java"/>
+    <element xsi:type="archimate:Node" name="VM-APP-CS (Win Server 2022)" id="nd-cs"/>
+    <element xsi:type="archimate:Node" name="VM-WORKERS-PY (Ubuntu+GPU)" id="nd-py"/>
+    <element xsi:type="archimate:Node" name="VM-IOT (Ubuntu)" id="nd-iot"/>
+    <element xsi:type="archimate:Node" name="VM-DB (Ubuntu)" id="nd-db"/>
+    <element xsi:type="archimate:Node" name="VM-STORAGE (MinIO)" id="nd-sto"/>
+    <element xsi:type="archimate:Device" name="Estação IoT ESP32" id="dv-esp"/>
+    <element xsi:type="archimate:Device" name="Raspberry Pi 4" id="dv-rpi"/>
+    <element xsi:type="archimate:Device" name="Smartphone Brigadista" id="dv-cel"/>
+    <element xsi:type="archimate:SystemSoftware" name="NGINX + Spring Cloud GW" id="sn-nginx"/>
+    <element xsi:type="archimate:SystemSoftware" name="IIS 10" id="sn-iis"/>
+    <element xsi:type="archimate:SystemSoftware" name="JVM 21 + Spring Boot" id="sn-jvm"/>
+    <element xsi:type="archimate:SystemSoftware" name="Python 3.12 + FastAPI" id="sn-py"/>
+    <element xsi:type="archimate:SystemSoftware" name="Eclipse Mosquitto" id="sn-mqtt"/>
+    <element xsi:type="archimate:SystemSoftware" name="PostgreSQL 16 + PostGIS" id="sn-pg"/>
+    <element xsi:type="archimate:SystemSoftware" name="MinIO Object Storage" id="sn-mn"/>
+  </folder>
+  <folder name="Motivation" id="id-67f9ebcb52f241ae917e9e52d3a80727" type="motivation">
+    <element xsi:type="archimate:Stakeholder" name="Cooperativa Agropecuária" id="sh-coop"/>
+    <element xsi:type="archimate:Stakeholder" name="Produtor Médio" id="sh-prod"/>
+    <element xsi:type="archimate:Stakeholder" name="Prefeitura / Defesa Civil" id="sh-prefe"/>
+    <element xsi:type="archimate:Stakeholder" name="Brigada de Campo" id="sh-brig"/>
+    <element xsi:type="archimate:Stakeholder" name="Empresa ESG / Seguro" id="sh-esg"/>
+    <element xsi:type="archimate:Stakeholder" name="INPE / NASA / ESA" id="sh-inpe"/>
+    <element xsi:type="archimate:Driver" name="D1 Risco Climático Crescente" id="dr-d1"/>
+    <element xsi:type="archimate:Driver" name="D2 Fragmentação de Fontes" id="dr-d2"/>
+    <element xsi:type="archimate:Driver" name="D3 Ruído da Detecção Bruta" id="dr-d3"/>
+    <element xsi:type="archimate:Driver" name="D4 Conectividade Rural Deficiente" id="dr-d4"/>
+    <element xsi:type="archimate:Driver" name="D5 Pressão ESG/Seguro" id="dr-d5"/>
+    <element xsi:type="archimate:Driver" name="D6 Custo Enterprise" id="dr-d6"/>
+    <element xsi:type="archimate:Goal" name="G1 Encurtar Ciclo Detecção-Ação" id="go-g1"/>
+    <element xsi:type="archimate:Goal" name="G2 Aumentar Confiabilidade" id="go-g2"/>
+    <element xsi:type="archimate:Goal" name="G3 Operar em Baixa Conectividade" id="go-g3"/>
+    <element xsi:type="archimate:Goal" name="G4 Evidência Auditável" id="go-g4"/>
+    <element xsi:type="archimate:Goal" name="G5 Integrar Fontes Públicas" id="go-g5"/>
+    <element xsi:type="archimate:Goal" name="G6 Viabilizar Produtor Médio" id="go-g6"/>
+    <element xsi:type="archimate:Outcome" name="Resposta &lt; 8min Mediana" id="oc-o1"/>
+    <element xsi:type="archimate:Outcome" name="80% Ocorrências Offline" id="oc-o2"/>
+    <element xsi:type="archimate:Outcome" name="Laudo Auditável 100%" id="oc-o3"/>
+    <element xsi:type="archimate:Requirement" name="RF-02 Validação por CV" id="rq-r1"/>
+    <element xsi:type="archimate:Requirement" name="RF-03 Score ML" id="rq-r2"/>
+    <element xsi:type="archimate:Requirement" name="RF-06 App Mobile Offline" id="rq-r3"/>
+    <element xsi:type="archimate:Requirement" name="RF-07 Estação IoT" id="rq-r4"/>
+    <element xsi:type="archimate:Requirement" name="RF-08 Laudo PDF Assinado" id="rq-r5"/>
+    <element xsi:type="archimate:Requirement" name="RF-09 RBAC + JWT" id="rq-r6"/>
+    <element xsi:type="archimate:Constraint" name="C-01 Não Construir Satélite" id="co-c1"/>
+    <element xsi:type="archimate:Constraint" name="C-04 Stack Java+C#+Py+RN" id="co-c4"/>
+    <element xsi:type="archimate:Constraint" name="C-05 Suportar Windows Server" id="co-c5"/>
+  </folder>
+  <folder name="Implementation &amp; Migration" id="id-cc03ec42a0e44e2a8766ec84ad773823" type="implementation_migration"/>
+  <folder name="Other" id="id-13379d1bd2444ef7991f1458c6ba58e3" type="other">
+    <element xsi:type="archimate:Location" name="Centro Operações Cloud" id="lo-cloud"/>
+    <element xsi:type="archimate:Location" name="Sede Cooperativa" id="lo-coop"/>
+    <element xsi:type="archimate:Location" name="Talhão / Campo" id="lo-cam"/>
+    <element xsi:type="archimate:Location" name="Centro Operações Municipal" id="lo-pref"/>
+    <element xsi:type="archimate:Grouping" name="Stakeholders" id="g1-sh"/>
+    <element xsi:type="archimate:Grouping" name="Drivers" id="g1-dr"/>
+    <element xsi:type="archimate:Grouping" name="Goals &amp; Outcomes" id="g1-go"/>
+    <element xsi:type="archimate:Grouping" name="Requirements" id="g1-rq"/>
+    <element xsi:type="archimate:Grouping" name="Constraints" id="g1-co"/>
+    <element xsi:type="archimate:Grouping" name="Localidades" id="g2-lo"/>
+    <element xsi:type="archimate:Grouping" name="Atores &amp; Papéis" id="g2-ac"/>
+    <element xsi:type="archimate:Grouping" name="Funções &amp; Processos de Negócio" id="g2-pr"/>
+    <element xsi:type="archimate:Grouping" name="Serviços de Negócio" id="g2-sv"/>
+    <element xsi:type="archimate:Grouping" name="Camada de Apresentação" id="g3-pr"/>
+    <element xsi:type="archimate:Grouping" name="Camada de API (SoA)" id="g3-api"/>
+    <element xsi:type="archimate:Grouping" name="Workers &amp; Integração" id="g3-wk"/>
+    <element xsi:type="archimate:Grouping" name="Serviços de Aplicação" id="g3-sv"/>
+    <element xsi:type="archimate:Grouping" name="Camada de Dados" id="g3-do"/>
+    <element xsi:type="archimate:Grouping" name="Fontes Externas" id="g3-ex"/>
+    <element xsi:type="archimate:Grouping" name="Zona Campo (4G/Starlink)" id="g4-fl"/>
+    <element xsi:type="archimate:Grouping" name="Zona DMZ (VLAN 10)" id="g4-dz"/>
+    <element xsi:type="archimate:Grouping" name="Zona Aplicação (VLAN 20)" id="g4-ap"/>
+    <element xsi:type="archimate:Grouping" name="Zona Dados (VLAN 30)" id="g4-dt"/>
+  </folder>
+  <folder name="Relations" id="id-749559b64b704e7cbe7baa212390b21e" type="relations">
+    <element xsi:type="archimate:AssociationRelationship" id="rel-1" source="g1-sh" target="g1-dr"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="rel-2" source="g1-dr" target="g1-go" strength="+"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-3" source="g1-rq" target="g1-go"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="rel-4" source="g1-co" target="g1-rq" strength="-"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-5" source="g2-lo" target="g2-ac"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-6" source="g2-ac" target="g2-pr"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-7" source="g2-pr" target="g2-sv"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="rel-8" source="bp-ing" target="bp-dep"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="rel-9" source="bp-dep" target="bp-enc"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="rel-10" source="bp-tel" target="bp-ing"/>
+    <element xsi:type="archimate:ServingRelationship" id="rel-11" source="g3-api" target="g3-pr"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-12" source="g3-api" target="g3-wk"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-13" source="g3-ex" target="g3-wk"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-14" source="g3-api" target="g3-sv"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-15" source="g3-wk" target="g3-sv"/>
+    <element xsi:type="archimate:AccessRelationship" id="rel-16" source="g3-api" target="g3-do"/>
+    <element xsi:type="archimate:AccessRelationship" id="rel-17" source="g3-wk" target="g3-do"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-18" source="g4-fl" target="g4-dz"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-19" source="g4-dz" target="g4-ap"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-20" source="g4-ap" target="g4-dt"/>
+  </folder>
+  <folder name="Views" id="id-f024cd498fc44ad78d2edbe26117f948" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="View 1 - Motivation &amp; Strategy" id="v1">
+      <child xsi:type="archimate:DiagramObject" id="n-v1-g1sh" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#e8daef" archimateElement="g1-sh">
+        <bounds x="20" y="20" width="1100" height="110"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v1-1" source="n-v1-g1sh" target="n-v1-g1dr" archimateRelationship="rel-1"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-sh-coop" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#bb8fce" archimateElement="sh-coop">
+          <bounds x="20" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-sh-prod" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#bb8fce" archimateElement="sh-prod">
+          <bounds x="195" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-sh-prefe" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#bb8fce" archimateElement="sh-prefe">
+          <bounds x="370" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-sh-brig" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#bb8fce" archimateElement="sh-brig">
+          <bounds x="545" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-sh-esg" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#bb8fce" archimateElement="sh-esg">
+          <bounds x="720" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-sh-inpe" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#bb8fce" archimateElement="sh-inpe">
+          <bounds x="895" y="40" width="180" height="50"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v1-g1dr" targetConnections="c-v1-1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#fadbd8" archimateElement="g1-dr">
+        <bounds x="20" y="160" width="1100" height="110"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v1-2" source="n-v1-g1dr" target="n-v1-g1go" archimateRelationship="rel-2"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-dr-d1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e6b0aa" archimateElement="dr-d1">
+          <bounds x="20" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-dr-d2" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e6b0aa" archimateElement="dr-d2">
+          <bounds x="195" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-dr-d3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e6b0aa" archimateElement="dr-d3">
+          <bounds x="370" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-dr-d4" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e6b0aa" archimateElement="dr-d4">
+          <bounds x="545" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-dr-d5" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e6b0aa" archimateElement="dr-d5">
+          <bounds x="720" y="40" width="160" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-dr-d6" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e6b0aa" archimateElement="dr-d6">
+          <bounds x="895" y="40" width="180" height="50"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v1-g1go" targetConnections="c-v1-2 c-v1-3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d5f5e3" archimateElement="g1-go">
+        <bounds x="20" y="300" width="1100" height="180"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-go-g1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="go-g1">
+          <bounds x="20" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-go-g2" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="go-g2">
+          <bounds x="205" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-go-g3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="go-g3">
+          <bounds x="390" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-go-g4" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="go-g4">
+          <bounds x="575" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-go-g5" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="go-g5">
+          <bounds x="760" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-go-g6" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="go-g6">
+          <bounds x="905" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-oc-o1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="oc-o1">
+          <bounds x="100" y="110" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-oc-o2" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="oc-o2">
+          <bounds x="420" y="110" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-oc-o3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#82e0aa" archimateElement="oc-o3">
+          <bounds x="720" y="110" width="200" height="50"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v1-g1rq" targetConnections="c-v1-4" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d6eaf8" archimateElement="g1-rq">
+        <bounds x="20" y="510" width="1100" height="110"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v1-3" source="n-v1-g1rq" target="n-v1-g1go" archimateRelationship="rel-3"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-rq-r1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="rq-r1">
+          <bounds x="20" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-rq-r2" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="rq-r2">
+          <bounds x="205" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-rq-r3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="rq-r3">
+          <bounds x="390" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-rq-r4" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="rq-r4">
+          <bounds x="575" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-rq-r5" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="rq-r5">
+          <bounds x="760" y="40" width="170" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-rq-r6" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="rq-r6">
+          <bounds x="905" y="40" width="170" height="50"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v1-g1co" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#eaeded" archimateElement="g1-co">
+        <bounds x="20" y="650" width="1100" height="110"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v1-4" source="n-v1-g1co" target="n-v1-g1rq" archimateRelationship="rel-4"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-co-c1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#aeb6bf" archimateElement="co-c1">
+          <bounds x="20" y="40" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-co-c4" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#aeb6bf" archimateElement="co-c4">
+          <bounds x="235" y="40" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v1-co-c5" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#aeb6bf" archimateElement="co-c5">
+          <bounds x="450" y="40" width="240" height="50"/>
+        </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="View 2 - Business Architecture" id="v2">
+      <child xsi:type="archimate:DiagramObject" id="n-v2-g2lo" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#fef9e7" archimateElement="g2-lo">
+        <bounds x="20" y="20" width="1100" height="110"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v2-1" source="n-v2-g2lo" target="n-v2-g2ac" archimateRelationship="rel-5"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-lo-cloud" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f9e79f" archimateElement="lo-cloud">
+          <bounds x="20" y="40" width="230" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-lo-coop" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f9e79f" archimateElement="lo-coop">
+          <bounds x="265" y="40" width="230" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-lo-cam" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f9e79f" archimateElement="lo-cam">
+          <bounds x="510" y="40" width="230" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-lo-pref" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f9e79f" archimateElement="lo-pref">
+          <bounds x="755" y="40" width="320" height="50"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v2-g2ac" targetConnections="c-v2-1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#fdebd0" archimateElement="g2-ac">
+        <bounds x="20" y="160" width="1100" height="180"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v2-2" source="n-v2-g2ac" target="n-v2-g2pr" archimateRelationship="rel-6"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-ba-op" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="ba-op">
+          <bounds x="20" y="40" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-ba-coord" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="ba-coord">
+          <bounds x="235" y="40" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-ba-brig" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="ba-brig">
+          <bounds x="450" y="40" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-ba-dc" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="ba-dc">
+          <bounds x="665" y="40" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-ba-aud" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="ba-aud">
+          <bounds x="880" y="40" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-br-tri" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="br-tri">
+          <bounds x="100" y="110" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-br-cam" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="br-cam">
+          <bounds x="450" y="110" width="200" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-br-ges" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f5cba7" archimateElement="br-ges">
+          <bounds x="770" y="110" width="200" height="50"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v2-g2pr" targetConnections="c-v2-2" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#fae5d3" archimateElement="g2-pr">
+        <bounds x="20" y="370" width="1100" height="230"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v2-3" source="n-v2-g2pr" target="n-v2-g2sv" archimateRelationship="rel-7"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bf-mon" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bf-mon">
+          <bounds x="20" y="40" width="250" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bf-des" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bf-des">
+          <bounds x="285" y="40" width="250" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bf-aud" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bf-aud">
+          <bounds x="550" y="40" width="250" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bf-sup" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bf-sup">
+          <bounds x="815" y="40" width="260" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bp-ing" targetConnections="c-v2-6" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bp-ing">
+          <bounds x="20" y="110" width="220" height="60"/>
+          <sourceConnection xsi:type="archimate:Connection" id="c-v2-4" source="n-v2-bp-ing" target="n-v2-bp-dep" archimateRelationship="rel-8"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bp-dep" targetConnections="c-v2-4" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bp-dep">
+          <bounds x="260" y="110" width="220" height="60"/>
+          <sourceConnection xsi:type="archimate:Connection" id="c-v2-5" source="n-v2-bp-dep" target="n-v2-bp-enc" archimateRelationship="rel-9"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bp-enc" targetConnections="c-v2-5" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bp-enc">
+          <bounds x="500" y="110" width="220" height="60"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bp-tel" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f8c471" archimateElement="bp-tel">
+          <bounds x="740" y="110" width="335" height="60"/>
+          <sourceConnection xsi:type="archimate:Connection" id="c-v2-6" source="n-v2-bp-tel" target="n-v2-bp-ing" archimateRelationship="rel-10"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v2-g2sv" targetConnections="c-v2-3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#fcf3cf" archimateElement="g2-sv">
+        <bounds x="20" y="630" width="1100" height="110"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bs-al" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f4d03f" archimateElement="bs-al">
+          <bounds x="20" y="40" width="250" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bs-de" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f4d03f" archimateElement="bs-de">
+          <bounds x="285" y="40" width="250" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bs-la" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f4d03f" archimateElement="bs-la">
+          <bounds x="550" y="40" width="250" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v2-bs-pa" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f4d03f" archimateElement="bs-pa">
+          <bounds x="815" y="40" width="260" height="50"/>
+        </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="View 3 - Application &amp; Data" id="v3">
+      <child xsi:type="archimate:DiagramObject" id="n-v3-g3pr" targetConnections="c-v3-1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#ebf5fb" archimateElement="g3-pr">
+        <bounds x="20" y="20" width="540" height="110"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-rn" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="ac-rn">
+          <bounds x="20" y="40" width="240" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-pa" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#85c1e9" archimateElement="ac-pa">
+          <bounds x="280" y="40" width="240" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v3-g3ex" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#eaecee" archimateElement="g3-ex">
+        <bounds x="600" y="20" width="500" height="110"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v3-3" source="n-v3-g3ex" target="n-v3-g3wk" archimateRelationship="rel-13"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-adp" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#aeb6bf" archimateElement="ac-adp">
+          <bounds x="20" y="40" width="460" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v3-g3api" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d6eaf8" archimateElement="g3-api">
+        <bounds x="20" y="160" width="540" height="180"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v3-1" source="n-v3-g3api" target="n-v3-g3pr" archimateRelationship="rel-11"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v3-2" source="n-v3-g3api" target="n-v3-g3wk" archimateRelationship="rel-12"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v3-4" source="n-v3-g3api" target="n-v3-g3sv" archimateRelationship="rel-14"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v3-6" source="n-v3-g3api" target="n-v3-g3do" archimateRelationship="rel-16"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-gw" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5dade2" archimateElement="ac-gw">
+          <bounds x="20" y="40" width="240" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-api" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5dade2" archimateElement="ac-api">
+          <bounds x="280" y="40" width="240" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-mqtt" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5dade2" archimateElement="ac-mqtt">
+          <bounds x="150" y="110" width="240" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v3-g3wk" targetConnections="c-v3-2 c-v3-3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d1f2eb" archimateElement="g3-wk">
+        <bounds x="600" y="160" width="500" height="180"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v3-5" source="n-v3-g3wk" target="n-v3-g3sv" archimateRelationship="rel-15"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v3-7" source="n-v3-g3wk" target="n-v3-g3do" archimateRelationship="rel-17"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-wing" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#48c9b0" archimateElement="ac-wing">
+          <bounds x="20" y="40" width="220" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-cv" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#48c9b0" archimateElement="ac-cv">
+          <bounds x="260" y="40" width="220" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-ml" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#48c9b0" archimateElement="ac-ml">
+          <bounds x="20" y="110" width="220" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-ac-laudo" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#48c9b0" archimateElement="ac-laudo">
+          <bounds x="260" y="110" width="220" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v3-g3sv" targetConnections="c-v3-4 c-v3-5" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d4e6f1" archimateElement="g3-sv">
+        <bounds x="20" y="370" width="1080" height="110"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-as-al" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#3498db" archimateElement="as-al">
+          <bounds x="20" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-as-oc" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#3498db" archimateElement="as-oc">
+          <bounds x="235" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-as-sc" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#3498db" archimateElement="as-sc">
+          <bounds x="450" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-as-pdf" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#3498db" archimateElement="as-pdf">
+          <bounds x="665" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-as-te" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#3498db" archimateElement="as-te">
+          <bounds x="880" y="40" width="180" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v3-g3do" targetConnections="c-v3-6 c-v3-7" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d6dbdf" archimateElement="g3-do">
+        <bounds x="20" y="510" width="1080" height="110"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-do-foc" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5499c7" archimateElement="do-foc">
+          <bounds x="20" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-do-area" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5499c7" archimateElement="do-area">
+          <bounds x="235" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-do-oco" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5499c7" archimateElement="do-oco">
+          <bounds x="450" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-do-evi" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5499c7" archimateElement="do-evi">
+          <bounds x="665" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v3-do-lau" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#5499c7" archimateElement="do-lau">
+          <bounds x="880" y="40" width="180" height="55"/>
+        </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="View 4 - Technology" id="v4">
+      <child xsi:type="archimate:DiagramObject" id="n-v4-g4fl" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#fcf3cf" archimateElement="g4-fl">
+        <bounds x="20" y="20" width="700" height="110"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v4-1" source="n-v4-g4fl" target="n-v4-g4dz" archimateRelationship="rel-18"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-dv-esp" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f7dc6f" archimateElement="dv-esp">
+          <bounds x="20" y="40" width="200" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-dv-rpi" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f7dc6f" archimateElement="dv-rpi">
+          <bounds x="240" y="40" width="220" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-dv-cel" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#f7dc6f" archimateElement="dv-cel">
+          <bounds x="480" y="40" width="200" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v4-g4dz" targetConnections="c-v4-1" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#fadbd8" archimateElement="g4-dz">
+        <bounds x="20" y="160" width="350" height="180"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v4-2" source="n-v4-g4dz" target="n-v4-g4ap" archimateRelationship="rel-19"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-nd-edge" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e59866" archimateElement="nd-edge">
+          <bounds x="20" y="40" width="310" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-nginx" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#e59866" archimateElement="sn-nginx">
+          <bounds x="20" y="110" width="310" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v4-g4ap" targetConnections="c-v4-2" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d5f5e3" archimateElement="g4-ap">
+        <bounds x="20" y="370" width="1080" height="260"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c-v4-3" source="n-v4-g4ap" target="n-v4-g4dt" archimateRelationship="rel-20"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-nd-java" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="nd-java">
+          <bounds x="20" y="40" width="250" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-nd-cs" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="nd-cs">
+          <bounds x="285" y="40" width="250" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-nd-py" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="nd-py">
+          <bounds x="550" y="40" width="250" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-nd-iot" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="nd-iot">
+          <bounds x="815" y="40" width="245" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-jvm" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="sn-jvm">
+          <bounds x="20" y="110" width="250" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-iis" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="sn-iis">
+          <bounds x="285" y="110" width="250" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-py" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="sn-py">
+          <bounds x="550" y="110" width="250" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-mqtt" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="sn-mqtt">
+          <bounds x="815" y="110" width="245" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-info" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="ac-api">
+          <bounds x="285" y="185" width="250" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-info2" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#58d68d" archimateElement="ac-laudo">
+          <bounds x="20" y="185" width="250" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="n-v4-g4dt" targetConnections="c-v4-3" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" textAlignment="1" fillColor="#d4efdf" archimateElement="g4-dt">
+        <bounds x="20" y="660" width="700" height="180"/>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-nd-db" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#27ae60" archimateElement="nd-db">
+          <bounds x="20" y="40" width="320" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-nd-sto" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#27ae60" archimateElement="nd-sto">
+          <bounds x="360" y="40" width="320" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-pg" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#27ae60" archimateElement="sn-pg">
+          <bounds x="20" y="110" width="320" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="n-v4-sn-mn" font="1|Segoe UI|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Segoe UI" fontColor="#1b2631" lineColor="#1b2631" fillColor="#27ae60" archimateElement="sn-mn">
+          <bounds x="360" y="110" width="320" height="55"/>
+        </child>
+      </child>
+    </element>
+  </folder>
+  <purpose>Modelo ArchiMate 3.1 - OrbitaAlerta - Global Solution FIAP 2026. Organizado em 4 views com Groupings para legibilidade.</purpose>
+</archimate:model>
