@@ -2,6 +2,7 @@
 
 > Documento de apoio à entrega da Global Solution 2026 — FIAP.
 > *Este é o "breve descritivo" referenciado como peso 1 da disciplina Testing, Compliance & Quality Assurance.*
+> Para mais informações, refira-se a *OrbitaAlerta_MasterDoc.md*
 
 ---
 
